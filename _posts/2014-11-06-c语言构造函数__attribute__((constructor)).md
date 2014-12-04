@@ -5,6 +5,9 @@ date: 2014-11-06 07:34
 category: Code
 tags: C
 ---
+
+{% include JB/setup %}
+
 相比C++，gcc的C语言也支持构造函数和析构函数，用于隐式地初始化数据，QEMU中的`type_init()`就使用了这种方式的初始化。
 
 构造函数在`main()`函数执行前提前执行，析构函数在`main()`退出后或`exit()`后执行。
