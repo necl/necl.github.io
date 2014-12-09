@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 调用linux socket接口设置IP地址
+title: linux socket接口设置IP地址
 description: ""
 category: Code
 tags: [Linux, socket]
