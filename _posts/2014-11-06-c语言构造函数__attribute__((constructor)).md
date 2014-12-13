@@ -1,19 +1,19 @@
 ---
 layout: post
-title: gcc C语言构造函数(constructor)和析构函数(destructor)
+title: gcc C语言构造函�?constructor)和析构函�?destructor)
 date: 2014-11-06 07:34
-category: Code
+category: Codes
 tags: C
 ---
 
 {% include JB/setup %}
 
-相比C++，gcc的C语言也支持构造函数和析构函数，用于隐式地初始化数据，QEMU中的`type_init()`就使用了这种方式的初始化。
+相比C++，gcc的C语言也支持构造函数和析构函数，用于隐式地初始化数据，QEMU中的`type_init()`就使用了这种方式的初始化�?
 
-构造函数在`main()`函数执行前提前执行，析构函数在`main()`退出后或`exit()`后执行。
+构造函数在`main()`函数执行前提前执行，析构函数在`main()`退出后或`exit()`后执行�?
 
-构造函数通过在函数名前面加constructor属性指定，析构函数通过在函数名前面加destructor属性指定。
-可以通过优先级指定调用顺序，优先级值越小的先执行。如下面函数声明：
+构造函数通过在函数名前面加constructor属性指定，析构函数通过在函数名前面加destructor属性指定�?
+可以通过优先级指定调用顺序，优先级值越小的先执行。如下面函数声明�?
 
     void __attribute__((constructor)) constructor_default(void );
     void __attribute__((constructor(110))) constructor_110(void );
@@ -22,7 +22,7 @@ tags: C
 
 
 
-测试代码如下：
+测试代码如下�?
 
     #include<stdio.h>
     int main()
